@@ -1,0 +1,138 @@
+$x=1 crée une variable
+
+echo""  affiche
+
+$first_name = "John";
+$last_name = "Doe";
+$name = $first_name . " " . $last_name;
+echo $name;
+
+$string = "The length of this string is 43 characters.";
+echo strlen($string);
+
+$filename = "image.png";
+$extension = substr($filename, strlen($filename) - 3);
+echo "The extension of the file is $extension";
+
+$fruits = "apple,banana,orange";
+$fruit_list = explode(",", $fruits);
+echo "The second fruit in the list is $fruit_list[1]";
+
+$fruit_list = ["apple","banana","orange"];
+$fruits = implode(",", $fruit_list);
+echo "The fruits are $fruits";
+
+
+
+$odd_numbers=[1,3,...]   crée un tableau
+
+$odd_numbers = [1,3,5,7,9];
+unset($odd_numbers[2]); // will remove the 3rd item (5) from the list
+print_r($odd_numbers);
+
+renvoi le nombre de membre du tableau
+$odd_numbers = [1,3,5,7,9];
+echo count($odd_numbers);
+
+reset renvoi le premier membre
+$odd_numbers = [1,3,5,7,9];
+$first_item = reset($odd_numbers);
+echo $first_item;
+
+end renvoi le dernier membre
+$odd_numbers = [1,3,5,7,9];
+$last_item = end($odd_numbers);
+echo $last_item;
+
+array push
+$numbers = [1,2,3];
+array_push($numbers, 4); // now array is [1,2,3,4];
+// print the new array
+print_r($numbers);
+
+arry_pop= supprime le dernier membre du tableau
+$numbers = [1,2,3,4];
+array_pop($numbers); // now array is [1,2,3];
+// print the new array
+print_r($numbers);
+
+arry_unshift= ajoute un membre au debut du tableau
+
+arry_shift= supprime le premier membre
+
+array_merge= concatenne 2 tableaux
+$odd_numbers = [1,3,5,7,9];
+$even_numbers = [2,4,6,8,10];
+$all_numbers = array_merge($odd_numbers, $even_numbers);
+print_r($all_numbers);
+
+sort= trie le contenue d'un tableau
+!= rsort trie in reverse
+
+array_slice= return un nouveau tableau en retirant quelque chose
+$numbers = [1,2,3,4,5,6];
+print_r(array_slice($numbers, 3));
+
+array_slice=affiche des membres spécifiques
+$numbers = [1,2,3,4,5,6];
+print_r(array_slice($numbers, 3, 2));
+
+array_splice= return en retirant et en supprimant du tableau original
+$numbers = [1,2,3,4,5,6];
+print_r(array_splice($numbers, 3, 2));
+print_r($numbers);
+
+arry_key_exists
+$phone_numbers = [
+  "Alex" => "415-235-8573",
+  "Jessica" => "415-492-4856",
+];
+
+if (array_key_exists("Alex", $phone_numbers)) {
+    echo "Alex's phone number is " . $phone_numbers["Alex"] . "\n";
+} else {
+    echo "Alex's phone number is not in the phone book!";
+}
+
+if (array_key_exists("Michael", $phone_numbers)) {
+    echo "Michael's phone number is " . $phone_numbers["Michael"] . "\n";
+} else {
+    echo "Michael's phone number is not in the phone book!";
+}
+
+array_keys= affiche que le nom
+$phone_numbers = [
+  "Alex" => "415-235-8573",
+  "Jessica" => "415-492-4856",
+];
+print_r(array_keys($phone_numbers));
+
+array_value= affiche que la valeur du tableau
+$phone_numbers = [
+  "Alex" => "415-235-8573",
+  "Jessica" => "415-492-4856",
+];
+print_r(array_values($phone_numbers));
+
+$multiArray = [ 
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+
+print_r($multiArray[0][0]) // 1
+print_r($multiArray[0][1]) // 2
+print_r($multiArray[0][2]) // 3
+
+$people = [
+    "john_doe" => [
+        "name" => "John",
+        "surname" => "Doe",
+        "age" => 25,
+    ],
+    "jane_doe" => [
+        "name" => "Jane",
+        "surname" => "Doe",
+        "age" => 25,
+    ]
+];
